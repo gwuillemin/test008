@@ -20,7 +20,7 @@ branches:
   integration_prefix: "tars/integration/"
   setup: "tars/setup/project"
 setup:
-  initialized: false
+  initialized: true
   first_memory_file: "docs/tars/charter.md"
 
 manifest:
@@ -58,7 +58,7 @@ manifest:
     purpose: "Captures the project's Goals, Values, and Principles."
     setup_responsibility: "Project owner completes during first-run setup."
     required: true
-    applied_hash: "d576e151e33290885fa3b9ccca11c978d42b22698066581cf2bd4debe625be35"
+    applied_hash: "509bd6181a855b3c46cdcad644c8c37d204288b208477a74a8407cb385572e6f"
   - path: "docs/tars/knowledge-items/assumptions.md"
     kind: "file"
     purpose: "Stores one initially empty, project-owned Knowledge Item index."
