@@ -1,0 +1,20 @@
+# Tars participant profiles
+
+schema_version: 2
+participant_profiles:
+  project_owner:
+    name: "Project Owner"
+    instructions: |-
+      keep responses outcome-focused and avoid technical depth unless requested.
+    consultation:
+      required_when: ""
+      useful_when: ""
+      unnecessary_when: ""
+  contributor:
+    name: "Contributor"
+    instructions: |-
+      focus on assigned work, context, and next actions.
+    consultation:
+      required_when: ""
+      useful_when: ""
+      unnecessary_when: ""

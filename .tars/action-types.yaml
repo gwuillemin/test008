@@ -1,0 +1,208 @@
+schema_version: 4
+action_types:
+  documentation:
+    name: Documentation
+    description: Create, update, rewrite, format, or review a human-readable project document.
+    enabled: true
+    ai_instructions: Create this Action when someone asks Tars to create, update, rewrite, format, or review a
+      human-readable project document. The result should appear in Documents. Do not use this type when an
+      existing file is being uploaded for ingestion or when the requested result is a runnable application.
+      Capture the document’s purpose, intended audience, requested format, and desired outcome. Default to
+      Markdown when no format is requested.
+    proposal_mode: auto
+    auto_start_mode: explicit_low_risk
+    risk: low
+    required_fields:
+      - title
+      - summary
+      - acceptance_criteria
+    require_charter_alignment: true
+    eligible_triggers:
+      - explicit_request
+      - implicit_need
+    eligible_sources:
+      - shared_conversation
+      - private_explicit
+    exclusions:
+      - advice_only
+      - question_or_acknowledgement
+      - negated_request
+      - status_or_feedback
+      - existing_action_execution
+    required_evidence:
+      - authenticated_actor
+      - source_event
+      - exact_source_excerpt
+      - accepted_charter_excerpt
+      - checkable_acceptance_criteria
+    consultation_behavior: optional
+    duplicate_behavior: reuse_open
+    conflict_behavior: require_review
+    positive_examples:
+      - Please create a family holiday meal-plan document for the children and adults.
+    negative_examples:
+      - What meals would you suggest for our holiday?
+  document_ingestion:
+    name: Document Ingestion
+    description: Import, retain, extract, summarise, or analyse an existing supplied file.
+    enabled: true
+    ai_instructions: Create this Action when someone supplies an existing file and asks Tars to import, store,
+      extract, summarise, or analyse it. Preserve the original source and place any derived outputs in
+      Documents. Do not use this type when the person wants Tars to write a new document from scratch. Capture
+      what should be retained and what analysis, if any, is requested.
+    proposal_mode: auto
+    auto_start_mode: never
+    risk: medium
+    required_fields:
+      - title
+      - summary
+      - acceptance_criteria
+    require_charter_alignment: true
+    eligible_triggers:
+      - explicit_request
+      - implicit_need
+    eligible_sources:
+      - shared_conversation
+      - private_explicit
+    exclusions:
+      - advice_only
+      - question_or_acknowledgement
+      - negated_request
+      - status_or_feedback
+      - existing_action_execution
+    required_evidence:
+      - authenticated_actor
+      - source_event
+      - exact_source_excerpt
+      - accepted_charter_excerpt
+      - checkable_acceptance_criteria
+    consultation_behavior: optional
+    duplicate_behavior: reuse_open
+    conflict_behavior: require_review
+    positive_examples:
+      - Please import the attached itinerary and retain a summary in Documents.
+    negative_examples:
+      - Please write a new itinerary from scratch.
+  implementation:
+    name: Implementation
+    description: Build, implement, fix, test, configure, or change an application or repository.
+    enabled: true
+    ai_instructions: Create this Action when someone asks Tars to build, implement, fix, test, configure, or
+      change an application or repository. New runnable applications should appear in Apps. Other code and
+      configuration changes should update the repository. Do not use this type when the person only wants an
+      explanation, research, or a document. Capture what should change and how the result can be checked.
+    proposal_mode: auto
+    auto_start_mode: never
+    risk: high
+    required_fields:
+      - title
+      - summary
+      - acceptance_criteria
+    require_charter_alignment: true
+    eligible_triggers:
+      - explicit_request
+      - implicit_need
+    eligible_sources:
+      - shared_conversation
+      - private_explicit
+    exclusions:
+      - advice_only
+      - question_or_acknowledgement
+      - negated_request
+      - status_or_feedback
+      - existing_action_execution
+    required_evidence:
+      - authenticated_actor
+      - source_event
+      - exact_source_excerpt
+      - accepted_charter_excerpt
+      - checkable_acceptance_criteria
+    consultation_behavior: optional
+    duplicate_behavior: reuse_open
+    conflict_behavior: require_review
+    positive_examples:
+      - Please create a standalone Node.js app where the children can upload destination photos.
+    negative_examples:
+      - How would a destination photo app work?
+  research_analysis:
+    name: Research & Analysis
+    description: Investigate, compare, assess, analyse, or recommend options with a durable result.
+    enabled: true
+    ai_instructions: Create this Action when someone asks Tars to investigate, compare, assess, analyse, or
+      recommend options and expects a durable result. Place the resulting report in Documents unless another
+      output is explicitly requested. Do not use this type when the person already knows what they want and is
+      asking Tars to implement it. Capture the question, relevant constraints, and the decision or outcome the
+      research should support.
+    proposal_mode: auto
+    auto_start_mode: explicit_low_risk
+    risk: low
+    required_fields:
+      - title
+      - summary
+      - acceptance_criteria
+    require_charter_alignment: true
+    eligible_triggers:
+      - explicit_request
+      - implicit_need
+    eligible_sources:
+      - shared_conversation
+      - private_explicit
+    exclusions:
+      - advice_only
+      - question_or_acknowledgement
+      - negated_request
+      - status_or_feedback
+      - existing_action_execution
+    required_evidence:
+      - authenticated_actor
+      - source_event
+      - exact_source_excerpt
+      - accepted_charter_excerpt
+      - checkable_acceptance_criteria
+    consultation_behavior: optional
+    duplicate_behavior: reuse_open
+    conflict_behavior: require_review
+    positive_examples:
+      - Compare the family activity options and save a cost-and-safety report in Documents.
+    negative_examples:
+      - Can you suggest a few family activities in chat?
+  project_configuration:
+    name: Project Configuration
+    description: Change how Tars behaves in this project.
+    enabled: true
+    ai_instructions: Create this Action when someone asks to change how Tars behaves in this project, including
+      project AI instructions, Action Types, Knowledge Item controls, or Participant Profile guidance. Do not
+      use this type for ordinary project documents, applications, or code changes. Capture what behaviour
+      should change and what the new behaviour should achieve.
+    proposal_mode: auto
+    auto_start_mode: never
+    risk: high
+    required_fields:
+      - title
+      - summary
+      - acceptance_criteria
+    require_charter_alignment: true
+    eligible_triggers:
+      - explicit_request
+    eligible_sources:
+      - shared_conversation
+      - private_explicit
+    exclusions:
+      - advice_only
+      - question_or_acknowledgement
+      - negated_request
+      - status_or_feedback
+      - existing_action_execution
+    required_evidence:
+      - authenticated_actor
+      - source_event
+      - exact_source_excerpt
+      - accepted_charter_excerpt
+      - checkable_acceptance_criteria
+    consultation_behavior: optional
+    duplicate_behavior: reuse_open
+    conflict_behavior: require_review
+    positive_examples:
+      - Please update this project's Action policy so documentation proposals require review.
+    negative_examples:
+      - Why did Tars create that Action?

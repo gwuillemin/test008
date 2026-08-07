@@ -1,0 +1,12 @@
+# Tars-owned branch marker
+
+schema_version: 1
+kind: "setup"
+project_id: "test008-2b0fd38d"
+onboarding_attempt_id: "07231278ac7b87f90185867b"
+branch_name: "tars/setup/project"
+repository_kind: "github"
+repository_slug: "gwuillemin/test008"
+template_id: "template-general"
+base_commit: "e8f06066431e444a6b9ad1c1df6612a4a63a1b42"
+ready: true

@@ -1,0 +1,85 @@
+# Tars project configuration
+
+schema_version: 1
+project:
+  id: "test008-2b0fd38d"
+  name: "test008"
+repository:
+  kind: "github"
+  slug: "gwuillemin/test008"
+  default_branch: "main"
+template:
+  id: "template-general"
+  name: "General"
+  category: "General"
+  version: "1.0.0"
+  applied_at: "2026-08-07T04:36:58.628Z"
+branches:
+  state: "tars/state"
+  change_prefix: "tars/changes/"
+  integration_prefix: "tars/integration/"
+  setup: "tars/setup/project"
+setup:
+  initialized: false
+  first_memory_file: "docs/tars/charter.md"
+
+manifest:
+  - path: ".tars/action-types.yaml"
+    kind: "file"
+    purpose: "Defines project Action Types and their AI routing instructions."
+    setup_responsibility: "Project owners maintain Action Types through validated, reviewable project-control changes."
+    required: true
+    applied_hash: "533eb4c1aebb28660b5228d96ad92ae69e8c4912a1cead48371e4ad305aa640b"
+  - path: ".tars/instructions.md"
+    kind: "file"
+    purpose: "Defines the project-specific instructions used by Tars in discussion and repository work."
+    setup_responsibility: "Tars creates during onboarding; project owner reviews later changes."
+    required: true
+    applied_hash: "a5a7011734b266547fd117c8ccee44fe3fbd703b8803ed40e342f43c3a6867aa"
+  - path: ".tars/knowledge-item-types.yaml"
+    kind: "file"
+    purpose: "Defines the enabled state and AI identification controls for the four Knowledge Item identities."
+    setup_responsibility: "Project members maintain Knowledge Item identification controls through the validated Knowledge Items surface."
+    required: true
+    applied_hash: "1c79d0bacd418a076ed32a314cd512f13a248e7542471a99a04d89cea4061386"
+  - path: ".tars/participant-profiles.yaml"
+    kind: "file"
+    purpose: "Maps stable participant-profile IDs to the instructions Tars uses for the authenticated user."
+    setup_responsibility: "Project owner maintains participant-profile source through reviewed changes."
+    required: true
+    applied_hash: "1827c928b4d30f7380635346d3339dc5430064f634613a4546d936ebea4130db"
+  - path: ".tars/project.yaml"
+    kind: "file"
+    purpose: "Records repository identity, setup state, selected template provenance, branches, and the applied file manifest."
+    setup_responsibility: "Tars creates during onboarding; project owner reviews later changes."
+    required: true
+  - path: "docs/tars/charter.md"
+    kind: "file"
+    purpose: "Captures the project's Goals, Values, and Principles."
+    setup_responsibility: "Project owner completes during first-run setup."
+    required: true
+    applied_hash: "d576e151e33290885fa3b9ccca11c978d42b22698066581cf2bd4debe625be35"
+  - path: "docs/tars/knowledge-items/assumptions.md"
+    kind: "file"
+    purpose: "Stores one initially empty, project-owned Knowledge Item index."
+    setup_responsibility: "Project team updates through reviewed Markdown changes."
+    required: true
+    applied_hash: "70a5809f82149a0495f4ea4321bfca7c6a0165daaf1a465a8f556224ecbf6386"
+  - path: "docs/tars/knowledge-items/decisions.md"
+    kind: "file"
+    purpose: "Stores one initially empty, project-owned Knowledge Item index."
+    setup_responsibility: "Project team updates through reviewed Markdown changes."
+    required: true
+    applied_hash: "c3eb1b68a1806961f0394914acb6af88c54b3b8fe563ca16152e6546e9382b51"
+  - path: "docs/tars/knowledge-items/ideas.md"
+    kind: "file"
+    purpose: "Stores one initially empty, project-owned Knowledge Item index."
+    setup_responsibility: "Project team updates through reviewed Markdown changes."
+    required: true
+    applied_hash: "fdf5efbb790b64ba099a8945e8f776e872df9b6bbcdb816dea90de28874615a5"
+  - path: "docs/tars/knowledge-items/information.md"
+    kind: "file"
+    purpose: "Stores one initially empty, project-owned Knowledge Item index."
+    setup_responsibility: "Project team updates through reviewed Markdown changes."
+    required: true
+    applied_hash: "7c64b50caaf54108745da91220eb51b8ee6f6e90a1d16ba4685226ff972facb1"
