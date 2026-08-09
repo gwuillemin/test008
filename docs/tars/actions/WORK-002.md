@@ -8,7 +8,7 @@ action_type_name: "Documentation"
 action_type_schema_version: 4
 action_type_completion_authority: "tars_when_verified"
 created_at: "2026-08-09T04:42:08.206Z"
-updated_at: "2026-08-09T04:42:08.558Z"
+updated_at: "2026-08-09T04:43:40.497Z"
 origin_kind: "explicit_request"
 priority: "normal"
 assignee_kind: "tars"
@@ -22,7 +22,7 @@ cancelled_at:
 failure:
 kind: "deliverable"
 artifact_kind: "deliverable"
-status: "in_progress"
+status: "in_review"
 actor: "tars"
 actor_type: "ai_agent"
 requested_by: "guywuillemin@me.com"
@@ -43,7 +43,7 @@ artifact_scope: "source_code_or_other"
 document_formats: "markdown"
 execution_mode: "tars"
 delivery_owner: "tars"
-execution_state: "in_progress"
+execution_state: "succeeded"
 branch_prepared: "true"
 capability_reason: "Tars can execute this delivery with tools in an isolated disposable runner."
 readiness_state: "proposed"
@@ -83,6 +83,9 @@ candidate_knowledge_item_count: 0
 ingestion_error:
 ingestion_next_action: ""
 execution_action_id: "web:planned-auto-execute:turn-5ee9a68b-b96b-4449-b328-56cfed03b674:create-family-new-zealand-itinerary"
+execution_head_sha: "7c2ac534898663dddd29ae73bb45cbc139d21e5a"
+execution_reason: "Created `docs/tars/documents/WORK-002/index.md` with a practical family itinerary covering 13 September through 2 October. It includes the Wellington start, Cook Strait ferry and car-hire logistics, a paced South Island driving route reaching Queenstown on 22 September, child-friendly scenery and wildlife activities, rest and weather-buffer days, departure logistics, assumptions, and outstanding booking details. Changed 1 path. Verified: Confirmed the required directory contains only the requested `index.md` output.; Ran a Python validation confirming every date from 13–30 September and 1–2 October is represented.; Validated the Queenstown arrival milestone on 22 September and final departure from Queenstown."
+execution_verification: "[]"
 ---
 
 # Create the New Zealand family holiday itinerary
