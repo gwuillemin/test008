@@ -2,19 +2,21 @@
 
 schema_version: 2
 participant_profiles:
-  project_owner:
-    name: "Project Owner"
-    instructions: |-
-      keep responses outcome-focused and avoid technical depth unless requested.
-    consultation:
-      required_when: ""
-      useful_when: ""
-      unnecessary_when: ""
   contributor:
-    name: "Contributor"
-    instructions: |-
-      focus on assigned work, context, and next actions.
+    name: Contributor
+    instructions: focus on assigned work, context, and next actions.
     consultation:
       required_when: ""
       useful_when: ""
       unnecessary_when: ""
+    status: active
+    visibility: project
+  project_owner:
+    name: Project Owner
+    instructions: keep responses outcome-focused and avoid technical depth unless requested.
+    consultation:
+      required_when: When something is discussed that presents risk to the project timeline.
+      useful_when: when someone needs help to understand the project direction.
+      unnecessary_when: when people are working towards the goal.
+    status: active
+    visibility: project
