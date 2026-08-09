@@ -11,8 +11,8 @@ created_at: "2026-08-09T04:42:08.206Z"
 updated_at: "2026-08-09T04:42:08.206Z"
 origin_kind: "explicit_request"
 priority: "normal"
-assignee_kind: "unassigned"
-assignee_id: ""
+assignee_kind: "tars"
+assignee_id: "tars"
 action_fields: "{}"
 dependencies: "[]"
 acceptance_criteria: "[\"Provide a dated itinerary covering 13 September through 2 October.\",\"Start the journey in Wellington, include travel through the South Island by car, reach Queenstown on 22 September, and finish with departure from Queenstown on 2 October.\",\"Keep driving distances realistic for a family with children aged 9 and 11 and avoid consecutive long-driving days.\",\"Include a balanced mix of distinctive South Island scenery, wildlife or outdoor experiences, child-friendly activities, rest, and flexible time.\",\"Address Wellington-to-South-Island transport and car-hire logistics as part of the connected route.\",\"Clearly identify assumptions and details still requiring confirmation, such as flight times, accommodation, budget, transport bookings, and activity availability.\",\"Format the result as a readable Markdown itinerary document.\"]"
@@ -22,9 +22,9 @@ cancelled_at:
 failure:
 kind: "deliverable"
 artifact_kind: "deliverable"
-status: proposed
-actor: "none"
-actor_type: "none"
+status: "in_progress"
+actor: "tars"
+actor_type: "ai_agent"
 requested_by: "guywuillemin@me.com"
 requested_by_user_id: "user-e1e9be98-d4f"
 requested_by_name: "Guy"
@@ -33,19 +33,19 @@ origin_action_id: "0eadbccb-8dc1-503d-a6e0-c10a2040e78e"
 summary: "Produce a practical, day-by-day family itinerary from arrival in Wellington on 13 September through departure from Queenstown on 2 October, reaching Queenstown by 22 September."
 target_version: 
 included_version:
-change_branch: ""
-proposal_branch: ""
+change_branch: "tars/changes/WORK-002"
+proposal_branch: "tars/changes/WORK-002"
 integration_branch:
 base_sha: "eefc6fbb77d548ff59f8042e0eaa982cc30b150c"
 execution_base_sha: "eefc6fbb77d548ff59f8042e0eaa982cc30b150c"
-durable_action: "capture"
-artifact_scope: "none"
-document_formats: ""
-execution_mode: "none"
-delivery_owner: "none"
-execution_state: "captured"
-branch_prepared: false
-capability_reason: "The Action was proposed without starting execution."
+durable_action: "execute"
+artifact_scope: "source_code_or_other"
+document_formats: "markdown"
+execution_mode: "tars"
+delivery_owner: "tars"
+execution_state: "in_progress"
+branch_prepared: "false"
+capability_reason: "Tars can execute this delivery with tools in an isolated disposable runner."
 readiness_state: "proposed"
 readiness_outcome: "Produce a practical, day-by-day family itinerary from arrival in Wellington on 13 September through departure from Queenstown on 2 October, reaching Queenstown by 22 September."
 readiness_scope: ""
@@ -82,6 +82,7 @@ derived_document_kinds: "[]"
 candidate_knowledge_item_count: 0
 ingestion_error:
 ingestion_next_action: ""
+execution_action_id: "web:planned-auto-execute:turn-5ee9a68b-b96b-4449-b328-56cfed03b674:create-family-new-zealand-itinerary"
 ---
 
 # Create the New Zealand family holiday itinerary
@@ -92,11 +93,11 @@ Produce a practical, day-by-day family itinerary from arrival in Wellington on 1
 
 ## Branch
 
-No execution branch requested.
+`tars/changes/WORK-002`
 
 ## Delivery
 
-Recorded as a work request without starting delivery.
+Tars is executing the work-record delivery on the isolated branch.
 
 ## Readiness
 
