@@ -79,7 +79,7 @@ knowledge_item_types:
     negative_examples:
       - Tars recommends staying near the beach.
   information:
-    enabled: false
+    enabled: true
     identify_when: Record only a durable, project-specific fact, source, measurement, constraint, or
       contextual detail that materially affects an accepted Goal or how a Value or Principle is
       applied. Require evidence from the source and an exact grounding excerpt from the accepted
