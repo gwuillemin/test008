@@ -118,7 +118,7 @@ knowledge_item_types:
     negative_examples:
       - The budget Action is still in progress.
   assumption:
-    enabled: false
+    enabled: true
     identify_when: Record only a durable, project-specific proposition that the team is explicitly
       treating as true pending validation. It must materially affect an accepted Goal and be
       compatible with the project's Values and Principles; the dependency and need for validation
