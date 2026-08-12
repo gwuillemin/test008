@@ -40,7 +40,7 @@ knowledge_item_types:
     negative_examples:
       - Please create the itinerary document.
   decision:
-    enabled: false
+    enabled: true
     identify_when: Record only a durable choice that the source explicitly shows project participants
       have made. It must materially support an accepted Goal and be compatible with the project's
       Values and Principles. Require evidence from the source and an exact grounding excerpt from
