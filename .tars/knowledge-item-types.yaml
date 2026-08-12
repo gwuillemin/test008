@@ -10,7 +10,7 @@ knowledge_item_types:
       retries, troubleshooting, corrections of Tars, questions, acknowledgements, and passing
       discussion.
     conflict_action: create_new
-    capture_mode: off
+    capture_mode: auto
     eligible_sources:
       - shared_conversation
       - private_explicit
