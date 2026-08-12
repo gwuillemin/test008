@@ -1,7 +1,7 @@
 schema_version: 3
 knowledge_item_types:
   idea:
-    enabled: false
+    enabled: true
     identify_when: Record only a durable, concrete project possibility that has not been accepted. It
       must materially advance or test an accepted Goal, and the proposed direction must be
       compatible with the project's Values and Principles. Require evidence from the source and an
