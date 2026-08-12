@@ -48,7 +48,7 @@ knowledge_item_types:
       Exclude Action or work status, delivery or completion claims, failures, retries,
       troubleshooting, corrections of Tars, questions, acknowledgements, and passing discussion.
     conflict_action: create_new
-    capture_mode: off
+    capture_mode: suggest
     eligible_sources:
       - shared_conversation
       - private_explicit
