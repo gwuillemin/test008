@@ -88,7 +88,7 @@ knowledge_item_types:
       document, application, file, or other work product; troubleshooting, corrections or feedback
       about Tars, requests, questions, acknowledgements, and other transient conversation.
     conflict_action: update_existing
-    capture_mode: off
+    capture_mode: suggest
     eligible_sources:
       - shared_conversation
       - private_explicit
